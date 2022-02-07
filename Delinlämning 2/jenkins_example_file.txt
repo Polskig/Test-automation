@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+    tools { nodejs "nodejs" }
+
+	// Change each stage to what you intend to do
+    stages {
+        stage('Tools initiated') {
+            steps {
+                // investigate needed tools
+            }
+        }
+        stage('Checkout code') {
+            steps {
+                // checkout code if we have any
+            }
+        }
+        stage('Build') {
+            steps {
+                // build something
+            }
+        }
+        stage('Unit Test') {
+            steps {
+                // run unit tests
+            }
+        }
+        stage('Start System') {
+            steps {
+                // Startup system
+            }
+        }
+        stage('automated system tests') {
+            steps {
+                // Run automated system tests
+            }
+        }
+    }
+}
