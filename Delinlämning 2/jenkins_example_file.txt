@@ -6,22 +6,22 @@ pipeline {
     stages {
         stage('Tools initiated') {
             steps {
-                // investigate needed tools
+                // initiate the cypress tool
             }
         }
         stage('Checkout code') {
             steps {
-                // checkout code if we have any
+                // checkout if the tool can get code form github
             }
         }
         stage('Build') {
             steps {
-                // build something
+                // see if the build is able to run  
             }
         }
         stage('Unit Test') {
             steps {
-                // run unit tests
+                // run a unit test where it goes into an item and checks if it is possible to click the item and add it to the shopping basket
             }
         }
         stage('Start System') {
