@@ -19,19 +19,19 @@ pipeline {
                 // see if the build is able to run  
             }
         }
-        stage('Unit Test') {
+        stage('Run the build') {
             steps {
-                // run a unit test where it goes into an item and checks if it is possible to click the item and add it to the shopping basket
+                // See if the build can be run multiple times with it still doing the test
             }
         }
-        stage('Start System') {
+        stage('test') {
             steps {
-                // Startup system
+                // Write the test with how it should work wit hthe build
             }
         }
-        stage('automated system tests') {
+        stage('automated tests') {
             steps {
-                // Run automated system tests
+                // Run the tests
             }
         }
     }
