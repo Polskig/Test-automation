@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Checkout code') {
             steps {
-                // checkout if the tool can get code form github
+                // checkout if the tool can get code from github
             }
         }
         stage('Build') {
