@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Checkout code') {
             steps {
-                // checkout if the tool can get code from github
+                git branch: 'main', url:'https://github.com/Polskig/Test-automation/tree/main/Cypress'
             }
         }
         stage('Build') {
