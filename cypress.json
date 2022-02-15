@@ -3,5 +3,6 @@
 }
 
 {
-    "integrationFolder": "."
+    "integrationFolder": ".",
+    "testFiles": "MyFirstTest.spec.js"
 }
