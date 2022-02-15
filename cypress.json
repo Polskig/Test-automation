@@ -1,10 +1,3 @@
 {
-    "chromeWebSecurity": false
-
-    
+    "chromeWebSecurity": false 
 }
-
-/*{
-    "integrationFolder": ".",
-    "testFiles": "MyFirstTest.spec.js"
-}*/
