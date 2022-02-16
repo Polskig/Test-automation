@@ -1,5 +1,7 @@
 describe('My First Test', function () {
     it('Clicks an element', function () {
+        cy.viewport('iphone-6')
+
         cy.visit('https://www.inet.se/')
 
         cy.contains('Jag förstår').click()
