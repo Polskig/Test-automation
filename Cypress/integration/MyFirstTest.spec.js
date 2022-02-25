@@ -49,7 +49,7 @@ describe('Tests clicking a button in the side menu', function () {
         //cy.get('.product-name > a').should('MSI 27" Optix G273QF QHD IPS 165 Hz')
     })
 
-    it('Clicks an element', function () {
+    it('See if it is possivle to add more of hte same item and take it away form the cart', function () {
         //cy.viewport('iphone-6')
 
         cy.visit('https://www.inet.se/')
@@ -76,7 +76,7 @@ describe('Tests clicking a button in the side menu', function () {
     })
 
     describe('Tests datorbygge', function () {
-        it('Clicks thge next and previous on slides', function () {
+        it('See if things can be searched and added to the datorbygges', function () {
             //cy.viewport('iphone-6')
     
             cy.visit('https://www.inet.se/')
