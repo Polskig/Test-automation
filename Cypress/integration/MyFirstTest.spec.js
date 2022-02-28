@@ -75,91 +75,109 @@ describe('Tests clicking a button in the side menu', function () {
         //cy.get('.qty-selector > :nth-child(1)').click()
     })
 
-    describe('Tests datorbygge', function () {
-        it('See if things can be searched and added to the datorbygges', function () {
-            //cy.viewport('iphone-6')
-    
-            cy.visit('https://www.inet.se/')
-    
-            cy.contains('Jag förstår').click()
-    
-            cy.get(':nth-child(22) > .tree-item > .item-button > .name').click()
-    
-            cy.get('#chassi > a > .large').click()
-    
-            cy.get('.form-control').type('Phanteks P600S Tempered Glass Svart').should('have.value', 'Phanteks P600S Tempered Glass Svart')
-    
-            cy.wait(1000)
-    
-            cy.get('.price-buy-compare > .btn').click()
-    
-            cy.get('#cpu > a > .large').click()
-    
-            cy.get('.form-control').type('AMD Ryzen 9 5900X').should('have.value', 'AMD Ryzen 9 5900X')
-    
-            cy.wait(1000)
-    
-            cy.get('.price-buy-compare > .btn').click()
-    
-            cy.get('#gpu > a > .large').click()
-    
-            cy.get('.form-control').type('msi rtx 3080 ti suprim').should('have.value', 'msi rtx 3080 ti suprim')
-    
-            cy.wait(1000)
-    
-            cy.get('.price-buy-compare > .btn').click()
-    
-            cy.get('#mobo > a > .large').click()
-    
-            cy.get('.form-control').type('MSI MPG X570S CARBON MAX WIFI').should('have.value', 'MSI MPG X570S CARBON MAX WIFI')
-    
-            cy.wait(1000)
-    
-            cy.get('.price-buy-compare > .btn').click()
-    
-            cy.get('#ram > a > .large').click()
-    
-            cy.get('.form-control').type('Corsair 32GB (2x16GB) DDR4 3200MHz CL16 Vengeance RGB RT Svart').should('have.value', 'Corsair 32GB (2x16GB) DDR4 3200MHz CL16 Vengeance RGB RT Svart')
-    
-            cy.wait(1000)
-    
-            cy.get('.price-buy-compare > .btn').click()
-    
-            cy.get('#ssd > a > .large').click()
-    
-            cy.get('.form-control').type('Gigabyte AORUS NVMe Gen4 7000s SSD 1TB').should('have.value', 'Gigabyte AORUS NVMe Gen4 7000s SSD 1TB')
-    
-            cy.wait(1000)
-    
-            cy.get('.price-buy-compare > .btn').click()
-    
-            cy.get('#cooler > a > .large').click()
-    
-            cy.get('.form-control').type('Noctua NH-U12A Chromax Black').should('have.value', 'Noctua NH-U12A Chromax Black')
-    
-            cy.wait(1000)
-    
-            cy.get('.price-buy-compare > .btn').click()
-    
-            cy.get('#psu > a > .large').click()
-    
-            cy.get('.form-control').type('Corsair RM1000X 1000W v3').should('have.value', 'Corsair RM1000X 1000W v3')
-    
-            cy.wait(1000)
-    
-            cy.get('.price-buy-compare > .btn').click()
-    
-            cy.get('#os > a > .large').click()
-    
-            cy.get('.form-control').type('Windows 11 Home Svensk 64-bit OEM').should('have.value', 'Windows 11 Home Svensk 64-bit OEM')
-    
-            cy.wait(1000)
-    
-            cy.get('.price-buy-compare > .btn').click()
-    
-            cy.wait(1000)
-    
-            cy.get('.button-toolbar-pc > a > .btn').click()
-        })
+    it('Tests the submenu on phone', function () {
+        cy.viewport('iphone-6')
+
+        cy.visit('https://www.inet.se/')
+
+        cy.contains('Jag förstår').click()
+
+        cy.get('.hamburger').click()
+
+        cy.get(':nth-child(4) > .tree-item > .expand-button').click()
+
+        cy.get('.lvl2 > :nth-child(8) > .tree-item > .expand-button').click()
+
+        cy.get('.lvl3 > :nth-child(1) > .tree-item > .expand-button').click()
+
+        cy.contains('Wacom').click()
+
+        cy.url().should('include', '/kategori/920/plattor/412/wacom')
+    })
+
+    it('See if things can be searched and added to the datorbygges', function () {
+        //cy.viewport('iphone-6')
+
+        cy.visit('https://www.inet.se/')
+
+        cy.contains('Jag förstår').click()
+
+        cy.get(':nth-child(22) > .tree-item > .item-button > .name').click()
+
+        cy.get('#chassi > a > .large').click()
+
+        cy.get('.form-control').type('Phanteks P600S Tempered Glass Svart').should('have.value', 'Phanteks P600S Tempered Glass Svart')
+
+        cy.wait(1000)
+
+        cy.get('.price-buy-compare > .btn').click()
+
+        cy.get('#cpu > a > .large').click()
+
+        cy.get('.form-control').type('AMD Ryzen 9 5900X').should('have.value', 'AMD Ryzen 9 5900X')
+
+        cy.wait(1000)
+
+        cy.get('.price-buy-compare > .btn').click()
+
+        cy.get('#gpu > a > .large').click()
+
+        cy.get('.form-control').type('msi rtx 3080 ti suprim').should('have.value', 'msi rtx 3080 ti suprim')
+
+        cy.wait(1000)
+
+        cy.get('.price-buy-compare > .btn').click()
+
+        cy.get('#mobo > a > .large').click()
+
+        cy.get('.form-control').type('MSI MPG X570S CARBON MAX WIFI').should('have.value', 'MSI MPG X570S CARBON MAX WIFI')
+
+        cy.wait(1000)
+
+        cy.get('.price-buy-compare > .btn').click()
+
+        cy.get('#ram > a > .large').click()
+
+        cy.get('.form-control').type('Corsair 32GB (2x16GB) DDR4 3200MHz CL16 Vengeance RGB RT Svart').should('have.value', 'Corsair 32GB (2x16GB) DDR4 3200MHz CL16 Vengeance RGB RT Svart')
+
+        cy.wait(1000)
+
+        cy.get('.price-buy-compare > .btn').click()
+
+        cy.get('#ssd > a > .large').click()
+
+        cy.get('.form-control').type('Gigabyte AORUS NVMe Gen4 7000s SSD 1TB').should('have.value', 'Gigabyte AORUS NVMe Gen4 7000s SSD 1TB')
+
+        cy.wait(1000)
+
+        cy.get('.price-buy-compare > .btn').click()
+
+        cy.get('#cooler > a > .large').click()
+
+        cy.get('.form-control').type('Noctua NH-U12A Chromax Black').should('have.value', 'Noctua NH-U12A Chromax Black')
+
+        cy.wait(1000)
+
+        cy.get('.price-buy-compare > .btn').click()
+
+        cy.get('#psu > a > .large').click()
+
+        cy.get('.form-control').type('Corsair RM1000X 1000W v3').should('have.value', 'Corsair RM1000X 1000W v3')
+
+        cy.wait(1000)
+
+        cy.get('.price-buy-compare > .btn').click()
+
+        cy.get('#os > a > .large').click()
+
+        cy.get('.form-control').type('Windows 11 Home Svensk 64-bit OEM').should('have.value', 'Windows 11 Home Svensk 64-bit OEM')
+
+        cy.wait(1000)
+
+        cy.get('.price-buy-compare > .btn').click()
+
+        cy.wait(1000)
+
+        cy.get('.button-toolbar-pc > a > .btn').click()
     })
 })
