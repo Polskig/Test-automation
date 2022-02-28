@@ -122,7 +122,7 @@ describe('Tests clicking a button in the side menu', function () {
 
         cy.get('#gpu > a > .large').click()
 
-        cy.get('.form-control').type('msi rtx 3080 ti suprim').should('have.value', 'msi rtx 3080 ti suprim')
+        cy.get('.form-control').type('MSI GeForce RTX 3080 Ti 12GB GAMING X TRIO').should('have.value', 'MSI GeForce RTX 3080 Ti 12GB GAMING X TRIO')
 
         cy.wait(1000)
 
