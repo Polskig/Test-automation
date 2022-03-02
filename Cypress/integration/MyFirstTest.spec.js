@@ -84,15 +84,11 @@ describe('Tests clicking a button in the side menu', function () {
 
         cy.get('.hamburger').click()
 
-        cy.get(':nth-child(4) > .tree-item > .expand-button').click()
+        cy.get(':nth-child(3) > .tree-item > .expand-button').click()
 
-        cy.get('.lvl2 > :nth-child(8) > .tree-item > .expand-button').click()
+        cy.get('.lvl2 > :nth-child(9) > .tree-item > .expand-button').click()
 
-        cy.get('.lvl3 > :nth-child(1) > .tree-item > .expand-button').click()
-
-        cy.contains('Wacom').click()
-
-        cy.url().should('include', '/kategori/920/plattor/412/wacom')
+        cy.get('.lvl3 > :nth-child(1) > .tree-item > .item-button > .name').click()
     })
 
     it('See if things can be searched and added to the datorbygges', function () {
